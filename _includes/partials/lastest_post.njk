@@ -1,0 +1,18 @@
+{% if metadata.widget.show_post %}
+<div class="p-3 p-md-4 bg-light rounded mt-2 mb-3">
+<h3 class="mb-5">{{metadata.widget.post}}</h3>
+{% for post in collections.posts | reverse | limit(4) %}
+<div class="row mb-3 border-bottom">
+<div class="col-4">
+<img class="img-fluid rounded blog_img_post" alt="{{post.data.title}}" width="100%" height="100%" src="{{post.data.image}}"/>
+</div>
+<div class="col-8">
+<p class="blog_title read_post"><strong><a href="{{post.url}}">{{post.data.title}}</a></strong></p>
+<p class="mt-0"><small>
+<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+</small></p>
+</div>
+</div>
+{% endfor %}
+</div>
+{% endif %}

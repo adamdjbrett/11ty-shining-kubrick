@@ -1,0 +1,16 @@
+{% if metadata.widget.show_featured %}
+<hr/>
+<h3 class="mb-5">{{metadata.widget.featured}}</h3>
+{%- for m in collections.featured | limit(3) -%} 
+<div class="row mt-3 mb-3">
+<div class="col-md-4">
+{% if m.data.image %}<a href="{{m.url}}"><img class="img-fluid blog_img_article_list rounded" alt="{{m.data.title}}" width="100%" height="100%" src="{{m.data.image}}"/></a>{% endif %}
+</div>
+<div class="col-md-8 p-3">
+<h4><strong><a href="{{m.url}}">{{m.data.title}}</a></strong></h4>
+<p><small><time datetime="{{ m.date | htmlDateString }}">{{ m.date | readableDate }}</time></small></p>
+<p class="article_more">{{m.data.description}}</p>
+</div>
+</div>
+{%- endfor -%}
+{% endif %}

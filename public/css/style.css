@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+h1,h2,h3,h4,h5,.info,.blog_title {
+  font-family: "Oswald";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 200 700;
+}
+.visual {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+html,body,.blogging{
+  font-family:"Segoe UI", "Helvetica Neue", Arial, "Noto Sans",
+    "Liberation Sans", sans-serif, system-ui, -apple-system, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+color: #262424;
+}
+
+img,iframe {border-radius: 3px;}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info::before,
+.info::after {
+  content: "";
+  display: inline-block;
+  width: 50px; 
+  height: 2px; 
+  background-color: #7d7575;
+opacity: 0.7; 
+  margin: 0 10px;
+}
+.header {margin-top:60px;margin-bottom:60px;}
+
+a { text-decoration:none;color:#120909;}
+a:hover {color:blue;}
+main {
+margin-top: 20px;
+margin-bottom: 40px;
+}
+
+.title {
+font-weight: bold;
+}
+.title a {
+text-decoration:none;
+}
+.article_title a:hover {color:blue;}
+.title::after {
+content: "";
+display: block;
+width: 50px;
+height: 2px;
+background-color: white;
+margin: 4px auto 0;
+}
+.dropdown-item:hover,.dropdown-item:hover{background-color:blue;color:black;}
+
+.read_more {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.6;
+  max-height: calc(1.6em * 3);
+  word-wrap: break-word;
+}
+
+.article_more {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.6;
+  max-height: calc(1.6em * 1);
+  word-wrap: break-word;
+}
+
+.read_post {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.6;
+  max-height: calc(1.6em * 2);
+  word-wrap: break-word;
+}
+
+.blog_img_post {width:100%;height:90px; object-fit:cover;}
+.blog_img_article {width:100%;height:400px; object-fit:cover;}
+.blog_img_article_list {width:100%;height:180px; object-fit:cover;}
+.more_info a:hover,.read_post a:hover {color:blue;}
+.footer_nav,.small {font-size:12px;}
+.nav-link:hover {color:blue;}
+
+
+@media screen and (min-width: 600px) {
+.mobile {display:none;}
+}
+
+
+
+@media screen and (max-width: 600px) {
+.desktop {display:none;}
+}
+

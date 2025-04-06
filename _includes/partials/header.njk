@@ -1,0 +1,84 @@
+<a href="#start" class="visual">Skip to main content</a>
+<main class="containter-fluid">
+<div class="container">
+<div class="row">
+<div class="col-md-12 mt-3 bg-white rounded shadow">
+
+<header class="col-md-12 bg-primary rounded mt-3 mb-3 text-center" style="background-image: url('{{metadata.image}}');background-size: cover;background-position: center;">
+<div class="col-md-10 mx-auto p-3 p-md-5">
+<div class="p-3 p-md-5 bg-dark opacity-75 rounded col-10 mx-auto col-md-8 header">
+<h1 class="title"><a href="{{metadata.url}}" class="text-white">{{metadata.title}}</a></h1>
+<h2 class="lead mt-3 text-white"><strong>{{metadata.description}}</strong></h2>
+</div>
+</div>
+
+<ul class="nav justify-content-center desktop bg-dark p-1 rounded-bottom">
+  <li class="nav-item">
+    <a class="nav-link text-white" aria-current="page" href="{{metadata.navbar.nav1.url}}">{{metadata.navbar.nav1.title}}</a>
+  </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{metadata.navbar.nav2.title}}
+          </a>
+          <ul class="dropdown-menu bg-dark">{% for n in metadata.navbar.nav2.list %}
+            <li><a class="dropdown-item text-white" href="{{n.url}}">{{n.nav}}</a></li>{% endfor %}
+          </ul>
+        </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="{{metadata.navbar.nav3.url}}">{{metadata.navbar.nav3.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="{{metadata.navbar.nav4.url}}">{{metadata.navbar.nav4.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="{{metadata.navbar.nav5.url}}">{{metadata.navbar.nav5.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link  text-white" href="#" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></a>
+  </li>
+</ul>
+
+<nav class="navbar navbar-dark bg-dark  rounded-bottom mobile">
+  <div class="container-fluid d-flex justify-content-center">
+<div class="text-center">
+  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+    <div class="offcanvas offcanvas-start text-start text-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header border border-bottom">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">{{metadata.title}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 p-3">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="{{metadata.navbar.nav1.url}}">{{metadata.navbar.nav1.title}}</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle  text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{metadata.navbar.nav2.title}}
+            </a>
+            <ul class="dropdown-menu">{% for n in metadata.navbar.nav2.list %}
+              <li><a class="dropdown-item text-dark" href="{{n.url}}">{{n.nav}}</a></li>{% endfor %}
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" aria-current="page" href="{{metadata.navbar.nav3.url}}">{{metadata.navbar.nav3.title}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" aria-current="page" href="{{metadata.navbar.nav4.url}}">{{metadata.navbar.nav4.title}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" aria-current="page" href="{{metadata.navbar.nav5.url}}">{{metadata.navbar.nav5.title}}</a>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <button class="btn btn-dark col-12" type="submit"><i class="fas fa-search me-3"></i> {{metadata.widget.search}}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+
+</header>
