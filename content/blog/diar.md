@@ -1,9 +1,6 @@
 ---
-title: Diarago elsodne lasinta deloresa
-description: Description of Diar
-show_table_of_content: true
-source: 
-canocial: 
+title: "Diarago elsodne lasinta deloresa"
+description: "Description of Diar"
 date: 2025-02-04
 ---
 # The Rise of Artificial Intelligence in Healthcare
