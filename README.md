@@ -1,8 +1,8 @@
 # 11ty-shining-kubrick
 
-A theme based off the iconic Kubrick Theme for WP. This port is named after the 11th film directed by Kubrick, The Shining.
+A theme based off the iconic Kubrick Theme for WP. This port is named after the 11th film directed by Kubrick, *The Shining*.
 
-Need help?? Or do you have a project to develop with me?? Contact Me Now
+Need help?? Or do you have a project to develop with me?
 
 Website : https://adamdjbrett.com
 
@@ -14,7 +14,7 @@ Email : info@adamdjbrett.com
 
 ### Info
 
-+ Developer : [Adam Dj Brett](https://www.adamdjbrett.com)
++ Developer : [Adam DJ Brett](https://www.adamdjbrett.com)
 + Website : https://www.adamdjbrett.com
 + Email: info@adamdjbrett.com
 
