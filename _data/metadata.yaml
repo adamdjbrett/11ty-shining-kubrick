@@ -4,7 +4,8 @@ image: "https://media.istockphoto.com/id/1306075353/photo/morning-fog-over-a-bea
 language: "en"
 locale: en_US
 favicon: /img/logos.png
-url: "http://localhost:8080"
+#url: "http://localhost:8080"
+url: "https://shining.000000076.xyz"
 metasocial: 
  - facebook: "https://www.facebook.com/"
  - twitteruser: "@username"
@@ -75,8 +76,8 @@ footer:
      url: https://youtube.com
      icon: fab fa-youtube
  text: Kubrick 11ty All rights reserved.
- text1: Develope by
- text2: Adam Dj Brett
+ text1: Developed by
+ text2: Adam DJ Brett
  text2_url: https://adamdjbrett.com
 
 author: 
