@@ -1,6 +1,7 @@
 ---
 title: "Black Cats"
 description: "The void blinks back"
+category: Pet
 tags: 
  - Cat
  - black
