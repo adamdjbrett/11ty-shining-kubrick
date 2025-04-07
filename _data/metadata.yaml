@@ -1,0 +1,110 @@
+title: "Kubrick 11ty"
+description: "A kubrick starter themes for eleventy projects."
+image: "https://media.istockphoto.com/id/1306075353/photo/morning-fog-over-a-beautiful-lake-surrounded-by-pine-forest-stock-photo.jpg?b=1&s=612x612&w=0&k=20&c=wsjMXx43deFn_WYP7xb0p_-bJ97Pr_-mkEajp8zkdP0="
+language: "en"
+locale: en_US
+favicon: /img/logos.png
+url: "http://localhost:8080"
+metasocial: 
+ - facebook: "https://www.facebook.com/"
+ - twitteruser: "@username"
+ - twitter: "https://x.com/user"
+
+navbar: 
+ nav1: 
+  title: Welcome
+  url: /
+ nav2: 
+  title: Features
+  list: 
+     - nav: Welcome
+       url: /
+     - nav: About
+       url: /about/
+     - nav: Download
+       url: https://github.com/adamdjbrett/11ty-shining-kubrick
+ nav3:
+    title: Experiences
+    url: /
+ nav4:
+    title: Contact
+    url: /contact
+ nav5: 
+    title: Github
+    url: https://github.com/adamdjbrett/11ty-shining-kubrick
+
+widget: 
+ featured: Discover more to read...
+ post: Lastest From the Blog
+ search: Search
+ tags: Tag Search
+ category: 11ty Kubrick
+ show_post: true
+ show_tags: true
+ show_author: true
+ show_featured: true
+ show_custom: true
+ custom_widget: 
+  - title: Lorep
+    image: "https://images.unsplash.com/photo-1743046813915-94cf6d5e6942?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMTR8fHxlbnwwfHx8fHw%3D"
+    text: "Lorep ipsum dolor siamet amet jabang bayi lanang wedok temenan"
+    button: More Info
+    url: /
+
+footer: 
+ navbar: 
+   - nav: Home
+     url: /
+   - nav: About
+     url: /about
+   - nav: Contact
+     url: /contact
+   - nav: Github
+     url: https://github.com/adamdjbrett/11ty-shining-kubrick
+ social: 
+   - nav: Follow my Twitter
+     url: https://x.com
+     icon: fab fa-twitter
+   - nav: Be Fans on Facebook
+     url: https://facebook.com
+     icon: fab fa-facebook
+   - nav: Follow my Instagram
+     url: https://instagram.com
+     icon: fab fa-instagram
+   - nav: Subscibse my Youtube Chanel
+     url: https://youtube.com
+     icon: fab fa-youtube
+ text: Kubrick 11ty All rights reserved.
+ text1: Develope by
+ text2: Adam Dj Brett
+ text2_url: https://adamdjbrett.com
+
+author: 
+ name: "Adam DJ Brett"
+ image: "https://avatars.githubusercontent.com/u/22662978?v=4"
+ about: "I’M A EDUCATOR, RESEARCHER, OPERATIONS MANAGER, AND A WEB DEVELOPER."
+ text: 
+  - info: "I love listening, learning, sharing, and hearing stories. Since 2016 I have been working with the American Indian Law Alliance (AILA). This work is challening and breaks me great joy. In 2022 I received my Ph.D. in religion from Syracuse University. I am passionate about researching and teaching the histories of the Doctrine of Discovery."
+ email: "info@adamdjbrett.com"
+ button: "More Info"
+ url: "https://www.adamdjbrett.com"
+ phone: "+123456789"
+ address: 
+  - text: "Alphain 11th"
+  - text: "New York , USA"
+ social: 
+  - title: "Facebook"
+    url: "https://www.fb.com"
+    icon: fab fa-facebook
+  - title: "Instagram"
+    url: "https://www.instagram.com"
+    icon: fab fa-instagram
+  - title: "Linked"
+    url: "https://www.linkedin.com"
+    icon: fab fa-linkedin
+  - title: "Twitter"
+    url: "https://www.x.com"
+    icon: fab fa-twitter
+  - title: "Youtube"
+    url: "https://www.youtube.com"
+    icon: fab fa-youtube

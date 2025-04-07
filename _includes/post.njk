@@ -1,0 +1,44 @@
+---
+layout: base.njk
+---
+<div class="col-md-8 p-3">
+<div class="text-center mb-5">
+<p class="lead text-secondary info"><strong>
+{{category}}
+</strong></p>
+<h3 class="article_title"><strong><a href="{{page.url}}">{{title}}</a></strong></h3>
+<p class="text-secondary"><small>
+<span class="ms-3"><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></span>
+<span class="ms-3"><a href="{{metadata.author.url}}">{{metadata.author.name}}</a></span>
+</small>
+</p>
+</div>
+{% if image %}<img class="img-fluid mb-5 blog_img_article rounded" alt="{{title}}" width="100%" height="100%" src="{{image}}"/>{% endif %}
+<heading-anchors>{{content|safe}}</heading-anchors>
+<hr/>
+<p><small>
+<i class="fa-solid fa-up-right-from-square me-1"></i> Posted on : <a href="/categories#{{ category | slug }}">{{category}}</a><br/>
+<i class="fas fa-tags me-1"></i> Tagged: {%- for tag in tags | filterTagList %}{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}<a href="{{ tagUrl }}" class="me-1 ms-1">{{ tag }}</a>{%- if not loop.last %}, {% endif %}{% endfor %}
+</small></p>
+{% include "partials/featured.njk" %}
+<hr/>
+
+{%- if collections.posts %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+{%- set nextPost = collections.posts | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<div class="row mt-3">
+<div class="col-6">
+{%- if previousPost %}
+<a href="{{ previousPost.url }}"><span class="blog_title">Previous Post</span><br/><small class="text-secondary">{{ previousPost.data.title }}</small></a>
+{% endif %}</div>
+<div class="col-6 text-end">
+{%- if nextPost %}
+<a href="{{ nextPost.url }}"><span class="blog_title">Next Post</span><br/>
+<small class="text-secondary">{{ nextPost.data.title }}</small></a>
+{% endif %}
+</div>
+</div>
+{%- endif %}
+{%- endif %}
+</div>

@@ -1,0 +1,7 @@
+<h2 class="mb-3">Tags</h2>
+<ul>
+{% for tag in collections | getKeys | filterTagList %}
+	{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+	<li class="p-1"><a href="{{ tagUrl }}">{{ tag }}</a></li>
+{% endfor %}
+</ul>

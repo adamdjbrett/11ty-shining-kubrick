@@ -1,0 +1,11 @@
+{% if metadata.widget.show_author %}
+<div class="p-3 p-md-4 bg-light rounded mb-3">
+<img class="img-fluid mb-3 rounded" alt="{{metadata.author.name}}" width="100%" height="100%" src="{{metadata.author.image}}"/>
+<h3 class="mb-3">{{metadata.author.name}}</h3>
+<p><strong>{{metadata.author.about}}</strong></p>
+{% for m in metadata.author.text %}<p>{{m.info}}</p>{% endfor %}
+<p class="more_info"><i class="fas fa-arrow-right me-3"></i><a href="{{metadata.author.url}}"><strong>More Info</strong></a></p>
+<div class="text-center p-3">{% for s in metadata.author.social %}<a href="{{s.url}}" title="{{s.title}}"><i class="{{s.icon}} me-3"></i></a>{% endfor %}<br/>
+<a href="mailto:{{metadata.author.email}}" class="btn btn-dark col-12 mt-3">Sent Me Message</a></div>
+</div>
+{% endif %}

@@ -1,0 +1,22 @@
+<section class="col-12 p-3"><hr/>
+<ul class="nav justify-content-center footer_nav">{% for n in metadata.footer.navbar %}
+<li class="nav-item">
+<a class="nav-link text-secondary" href="{{n.url}}">{{n.nav}}</a>
+</li>{% endfor %}
+</ul>
+<p class="text-center">
+{% for s in metadata.footer.social %}<a href="{{s.url}}" title="{{s.nav}}"><i class="{{s.icon}} me-3"></i></a>{% endfor %}
+</p>
+<p class="small text-center text-secondary">
+Copyright © <span id="tahun"></span>{{metadata.footer.text}}<br/>
+Built with <a href="https://11ty.dev">11ty</a> {{metadata.footer.text1}} <a href="{{metadata.footer.text2_url}}">{{metadata.footer.text2}}</a>
+</p>
+</section>
+</div>
+</div>
+</div>
+</main>
+{% include "partials/search.njk" %}
+<script>document.getElementById("tahun").textContent = new Date().getFullYear();</script>
+<script src="/js/bs.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
