@@ -5,11 +5,12 @@ description: Article Categories
 <h2 class="mb-5">{{title}}</h2>
 {% for category, posts in collections.categories %}
 <div class="p-3 bg-light shadow-sm rounded mb-3">
-<h3>{{ category }}</h3>
-<ul>
-{% for post in posts %}
-<li><a href="{{ post.url }}" id="{{ category | slug }}">{{ post.data.title }}</a></li>
-{% endfor %}
-</ul>
+  <h3>{{ category }}</h3>
+  <ul>
+    {% for post in posts %}
+    <li><a href="{{ post.url }}" id="{{ category | slug }}-{{ loop.index }}">{{ post.data.title }}</a></li>
+    {% endfor %}
+  </ul>
 </div>
 {% endfor %}
+

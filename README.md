@@ -20,6 +20,17 @@ Email : info@adamdjbrett.com
 
 ---
 
+### Change Log:
+
+#### 08 April 2025
+
++ Fix duplicate id categories
++ Install Markdown It
++ Add footernotes
++ Add Table of Content
+
+---
+
 ### Featured:
 
 + 11ty Aka Eleventy
@@ -33,6 +44,8 @@ Email : info@adamdjbrett.com
 + Posts Pagination
 + Auto SEO ready
 + Pagefind Search
++ Footernotes
++ Table Of Content
 + **New** Categories implementation inspired by jekyll
 + Clean Minimalist Design
 + Activate / Deactivate Widget Setup
