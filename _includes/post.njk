@@ -20,7 +20,7 @@ layout: base.njk
 <heading-anchors>{{content|safe}}</heading-anchors>
 <hr/>
 <p><small>
-<i class="fa-solid fa-up-right-from-square me-1"></i> Posted on : <a href="/categories#{{ category | slug }}">{{category}}</a><br/>
+{% if category %}<i class="fa-solid fa-up-right-from-square me-1"></i> Posted on : <a href="/categories#{{ category | slug }}">{{category}}</a><br/>{% endif %}
 <i class="fas fa-tags me-1"></i> Tagged: {%- for tag in tags | filterTagList %}{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}<a href="{{ tagUrl }}" class="me-1 ms-1">{{ tag }}</a>{%- if not loop.last %}, {% endif %}{% endfor %}
 </small></p>
 {% include "partials/featured.njk" %}
