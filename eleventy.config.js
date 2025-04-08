@@ -4,6 +4,11 @@ import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import yaml from "js-yaml";
 import CleanCSS from "clean-css";
+import markdownIt from 'markdown-it';
+import markdownItAnchor from "markdown-it-anchor";
+import markdownItFootnote from "markdown-it-footnote";
+import markdownItAttrs from 'markdown-it-attrs';
+import pluginTOC from 'eleventy-plugin-toc';
 import { stripHtml } from "string-strip-html";
 import { execSync } from 'child_process';
 
@@ -71,6 +76,40 @@ export default async function(eleventyConfig) {
 		execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
 	  })
 
+eleventyConfig.addPlugin(pluginSyntaxHighlight, {
+		preAttributes: { tabindex: 0 }
+	});  let options = {
+    html: true,
+    breaks: true,
+    linkify: true,
+      permalink: true,
+    typographer: true,
+      permalinkClass: "direct-link",
+      permalinkSymbol: "#"
+  };
+   let markdownLib = markdownIt(options).use(markdownItAttrs).use(markdownItFootnote);
+  eleventyConfig.setLibrary("md", markdownLib);
+
+	  eleventyConfig.amendLibrary("md", mdLib => {
+		mdLib.use(markdownItAnchor, {
+			permalink: markdownItAnchor.permalink.ariaHidden({
+				placement: "after",
+				class: "header-anchor",
+				symbol: "",
+				ariaHidden: false,
+			}),
+			level: [1,2,3,4],
+			slugify: eleventyConfig.getFilter("slugify")
+		});
+	});
+	  eleventyConfig.addPlugin(pluginTOC, {
+		tags: ['h2', 'h3', 'h4', 'h5'],
+		  id: 'toci', 
+		  class: 'list-group',
+		ul: true,
+		flat: false,
+		wrapper: 'div'
+	  });
 	eleventyConfig.addPlugin(pluginFilters);
 
 	eleventyConfig.addPlugin(IdAttributePlugin, {
@@ -82,24 +121,16 @@ export default async function(eleventyConfig) {
 
  eleventyConfig.addCollection("categories", function(collectionApi) {
     const categoryMap = new Map();
-
-    // Mengelompokkan item berdasarkan kategori
     collectionApi.getAll().forEach(item => {
       const category = item.data.category;
-      if (!category) return; // Abaikan jika kategori tidak ada
-      
+      if (!category) return;
       if (!categoryMap.has(category)) {
         categoryMap.set(category, []);
       }
-
       categoryMap.get(category).push(item);
     });
-
-    // Ubah menjadi objek agar lebih mudah diakses
     return Object.fromEntries(categoryMap);
   });
-
-
 };
 
 export const config = {
