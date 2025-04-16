@@ -6,14 +6,50 @@ h1,h2,h3,h4,h5,.info,.blog_title {
   font-weight: 200 700;
 }
 .visual {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
+    /* Positioning */
+    position: absolute;
+    left: -1000px;
+    top: 0;
+    
+    /* Typography */
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    
+    /* Visual Design */
+    background-color: #000;
+    color: #FFFFFF !important;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    
+    /* Transition Effects */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    /* Accessibility */
+    &:focus,
+    &:active {
+        left: 1rem;
+        top: 1rem;
+        outline: 3px solid #FFD700;
+        outline-offset: 2px;
+    }
+    
+    /* Hover States */
+    &:hover {
+        background-color: #1E429F;
+        text-decoration: underline;
+        transform: translateY(-1px);
+    }
+    
+    /* Remove Default Outline */
+    &:focus:not(:active) {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(42,93,176,0.5);
+    }
 }
+
 html,body,.blogging{
   font-family:"Segoe UI", "Helvetica Neue", Arial, "Noto Sans",
     "Liberation Sans", sans-serif, system-ui, -apple-system, "Apple Color Emoji",
